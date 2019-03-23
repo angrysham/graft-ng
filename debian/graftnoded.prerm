@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  remove|deconfigure)
+    update-alternatives --remove graft-blockchain-export /usr/bin/graft-blockchain-export.stable
+    update-alternatives --remove graft-blockchain-import /usr/bin/graft-blockchain-import.stable
+    update-alternatives --remove graft-wallet-cli /usr/bin/graft-wallet-cli.stable
+    update-alternatives --remove graft-wallet-rpc /usr/bin/graft-wallet-rpc.stable
+    update-alternatives --remove graftnoded /usr/bin/graftnoded.stable
+    update-alternatives --remove graft-includes /usr/include/graft.stable
+    ;;
+
+  upgrade|failed-upgrade)
+    ;;
+
+  *)
+    echo "prerm called with unknown argument '$1'" >&2
+    exit 0
+    ;;
+esac
+
+exit 0

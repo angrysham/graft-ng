@@ -1,0 +1,7 @@
+/usr/bin/graft-blockchain-*
+/usr/bin/graft-wallet-cli.stable
+/usr/bin/graft-wallet-rpc.stable
+/usr/bin/graftnoded.stable
+/usr/include/graft.stable
+/usr/lib/*/graft.stable/*
+

@@ -1,15 +1,30 @@
 Source: ng-graft
-Section: unknown
+Section: net
 Priority: optional
 Maintainer: Vadym Kovalenko <v.kovalenko@triangu.com>
-Build-Depends: debhelper (>= 10)
+Build-Depends: debhelper (>= 10), cmake, g++, libboost-dev (>= 1.58), libboost-filesystem-dev, libboost-thread-dev, libboost-date-time-dev, libboost-chrono-dev, libboost-regex-dev, libboost-serialization-dev, libboost-program-options-dev, libboost-locale-dev, libunbound-dev (>= 1.4.16), libminiupnpc-dev, libunwind8-dev, libssl-dev, libreadline-dev
 Standards-Version: 4.1.2
-Homepage: <graft.network>
+Homepage: <www.graft.network>
 #Vcs-Git: https://anonscm.debian.org/git/collab-maint/ng-graft.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ng-graft.git
 
-Package: ng-graft
+Package: graft-supernode
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Recommends: graftnoded
+Suggests: graft-wallet
+Description: GRAFT RTA supernode
+ This package contains the `graft-supernode' binary that communicates with a
+ graftnoded to host a GRAFT RTA supernode.
+ .
+ Note that the binary is instead called just `supernode` in the official
+ package.
+ .
+ This package requires some configuration: in particular, you will need to copy  /usr/share/doc/graft-supernode/config.ini into a local directory and modify it to suit your local configuration.
+
+Package: graftnoded
+Architecture: any
+Depends: libgraft0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Suggests: graft-blockchain-tools, graft-supernode
+Description: GRAFT node
+ This package contains the GRAFT P2P node, graftnoded, for synchronizing and supporting the GRAFT blockchain.

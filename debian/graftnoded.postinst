@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+update-alternatives --install /usr/bin/graft-blockchain-export graft-blockchain-export /usr/bin/graft-blockchain-export.stable 40
+update-alternatives --install /usr/bin/graft-blockchain-import graft-blockchain-import /usr/bin/graft-blockchain-import.stable 40
+update-alternatives --install /usr/bin/graft-wallet-cli graft-wallet-cli /usr/bin/graft-wallet-cli.stable 40
+update-alternatives --install /usr/bin/graft-wallet-rpc graft-wallet-rpc /usr/bin/graft-wallet-rpc.stable 40
+update-alternatives --install /usr/bin/graftnoded graftnoded /usr/bin/graftnoded.stable 40
+update-alternatives --install /usr/include/graft graft-includes /usr/include/graft.stable 40
+
+exit 0
+
