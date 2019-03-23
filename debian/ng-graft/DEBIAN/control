@@ -1,0 +1,10 @@
+Package: ng-graft
+Version: 1.0-1
+Architecture: amd64
+Maintainer: Vadym Kovalenko <v.kovalenko@triangu.com>
+Installed-Size: 14
+Section: unknown
+Priority: optional
+Homepage: <graft.network>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

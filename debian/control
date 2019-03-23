@@ -1,0 +1,15 @@
+Source: ng-graft
+Section: unknown
+Priority: optional
+Maintainer: Vadym Kovalenko <v.kovalenko@triangu.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: <graft.network>
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/ng-graft.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ng-graft.git
+
+Package: ng-graft
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
